@@ -37,9 +37,14 @@ gray = cv2.medianBlur(gray, 3)
 # apply OCR to it
 filename = "{}.png".format(os.getpid())
 cv2.imwrite(filename, gray)
+# Define config parameters.
+# '-l eng'  for using the English language
+# '--oem 1' for using LSTM OCR Engine
+
+config = ('-l "../spa.traineddata" --oem 1 --psm 3')
 # load the image as a PIL/Pillow image, apply OCR, and then delete
 # the temporary file
-text = pytesseract.image_to_string(Image.open(filename))
+text = pytesseract.image_to_string(Image.open(filename), config=config)
 os.remove(filename)
 print(text)
 
