@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> Digitalizador de factura </title>
+		
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+
+	<body>
+		<header> BIENVENIDO </header>
+
+		<div class="container">
+			<p class="first"> Ingresa la imagen de la factura a continuación </p>
+			<img id="uploaded-bill-image" src="assets/images/img_background.png" alt="Background image">
+			<label class="image-upload-label" for="image"> Subir imagen </label>
+			<input type="file" name="image" id="image">
+
+			<button class="send-btn" id="send_btn"> Enviar </button>
+		</div>
+
+		<div class="loading-modal" id="loading_modal">
+			<p class="loading-text"> Cargando ... </p>
+		</div>
+
+		<script src="assets/js/update_uploaded_image.js"></script>
+
+		<script>
+			var send_btn = document.getElementById('send_btn');
+			send_btn.addEventListener('click', (event) => {
+				var loading_modal = document.getElementById('loading_modal');
+				loading_modal.classList.add("active");
+			});
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
