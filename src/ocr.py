@@ -41,7 +41,7 @@ cv2.imwrite(filename, gray)
 # '-l eng'  for using the English language
 # '--oem 1' for using LSTM OCR Engine
 
-config = ('-l "../spa.traineddata" --oem 1 --psm 3')
+config = ('-l spa --oem 1 --psm 3')
 # load the image as a PIL/Pillow image, apply OCR, and then delete
 # the temporary file
 text = pytesseract.image_to_string(Image.open(filename), config=config)
