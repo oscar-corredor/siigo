@@ -7,7 +7,12 @@ const receiptProcessor = require('./receiptProcessor.js');
 const config = require('./config.js').config;
 // Set up the express app
 const app = express();
-app.use(bodyParser.json());
+app.use( bodyParser.json({limit: '50mb'}) );
+app.use(bodyParser.urlencoded({
+  limit: '50mb',
+  extended: true,
+  parameterLimit:50000
+}));
 app.use(bodyParser.urlencoded({ extended: true }));
 const upload = multer({ dest: `./` });
 // var type = upload.single('recfile');
