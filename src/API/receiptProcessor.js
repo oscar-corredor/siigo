@@ -9,9 +9,21 @@ module.exports = class receiptProcessor {
     });
   }
 
+
   processRegion(region) {
-    console.log(region.words);
+    console.log("===========");
+    region.lines.forEach(line => {
+      this.processLine(line);
+    });
   }
+
+  processLine(line) {
+    console.log("----------");
+    console.log(line.words);
+  }
+
+
+
 }
 
 exports

@@ -43,8 +43,8 @@ app.post('/receipts', upload.single('file'), (req, res) => {
       if (err) console.log(err);
       // console.log(res);
       bodyJSON = JSON.parse(body); 
-      // const processor = new receiptProcessor(bodyJSON.regions);
-      // processor.processRegions();
+      const processor = new receiptProcessor(bodyJSON.regions);
+      processor.processRegions();
       return res.send(bodyJSON)
     });
 
