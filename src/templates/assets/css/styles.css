@@ -105,6 +105,16 @@ header{
 	text-align: center;
 }
 
+/* List of bills */
+table{
+	width: 50%;
+	margin: 50px auto;
+	text-align: center;
+}
+table, td, th{
+	border: 1px solid gainsboro;
+}
+
 
 
 
