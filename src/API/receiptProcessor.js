@@ -1,5 +1,6 @@
 const Line = require('./receipt/line');
 const GenericRegion = require('./receipt/genericRegion');
+const DigitalReceipt = require('./receipt/digitalReceipt');
 
 module.exports = class receiptProcessor {
   constructor(regions) {
@@ -8,7 +9,9 @@ module.exports = class receiptProcessor {
 
   processReceipt() {
     const genericRegions = this.generateGenericRegions();
-    genericRegions.forEach(genericRegion => console.log(genericRegion.toString()));
+    // genericRegions.forEach(genericRegion => console.log(genericRegion.toString()));
+    const digitalReceipt = new DigitalReceipt(genericRegions);
+    return digitalReceipt;
   }
 
   generateGenericRegions() {
@@ -29,6 +32,8 @@ module.exports = class receiptProcessor {
     });
     return regionLines;
   }
+
+
 
 
   // processRegion(region) {
