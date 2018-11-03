@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> Digitalizador de factura </title>
+		
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+
+	<body>
+		<header> BIENVENIDO </header>
+
+		<div class="container">
+			<h3 class="bill-title"> Lista de facturas </h3>
+
+			<table>
+				<thead>
+					<th> Código de factura </th>
+					<th> NIT de la empresa </th>
+					<th> Ver </th>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td> 0001 </td>
+						<td> 000.000.000-0 </td>
+						<td> Ver </td>
+					</tr>
+					<tr>
+						<td> 0001 </td>
+						<td> 000.000.000-0 </td>
+						<td> Ver </td>
+					</tr>
+					<tr>
+						<td> 0001 </td>
+						<td> 000.000.000-0 </td>
+						<td> Ver </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+		<script src="assets/js/update_uploaded_image.js"></script>
+
+		<script>
+			var send_btn = document.getElementById('send_btn');
+			send_btn.addEventListener('click', (event) => {
+				var loading_modal = document.getElementById('loading_modal');
+				loading_modal.classList.add("active");
+			});
+		</script>
+	</body>
+</html>
